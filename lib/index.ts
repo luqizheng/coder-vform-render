@@ -16,10 +16,12 @@ import ContainerMixin1 from "./form-designer/form-widget/container-widget/contai
 import ContainerWrapper1 from "./form-designer/form-widget/container-widget/container-wrapper.vue"
 import staticContentWrapper from './form-designer/form-widget/field-widget/static-content-wrapper.vue'
 import emitter1 from "./utils/emitter";
-import i18n1,{translate as translate1} from "./utils/i18n";
+import i18n1, { translate as translate1 } from "./utils/i18n";
 import fieldMixin1 from "./form-designer/form-widget/field-widget/fieldMixin";
 import * as  Util from './utils/util'
-export { addENUSLabel as add_en_us_label, addENUSSetting as add_en_us_setting, addZhCNLabel as add_zh_cn_setting, addZhCNSetting as add_zh_cn_label ,addLangSetting,addLangLabel} from "@/utils/i18n";
+export { addENUSLabel as add_en_us_label, addENUSSetting as add_en_us_setting,
+     addZhCNLabel as add_zh_cn_setting, 
+     addZhCNSetting as add_zh_cn_label, addLangSetting, addLangLabel } from "./utils/i18n";
 
 
 export const SvgIcon = SvgIcon1
