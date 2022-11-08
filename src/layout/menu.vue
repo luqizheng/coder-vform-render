@@ -10,25 +10,7 @@
       <span>example1</span>
     </a-menu-item>
 
-    <a-menu-item key="/example2">
-      <pie-chart-outlined />
-      <span>example2</span>
-    </a-menu-item>
-    <!-- <a-menu-item key="/systemSet">
-      <desktop-outlined />
-      <span>Option 2</span>
-    </a-menu-item>
-    <a-sub-menu key="sub1">
-      <template #title>
-        <span>
-          <user-outlined />
-          <span>Option 3</span>
-        </span>
-      </template>
-      <a-menu-item key="3">用户管理</a-menu-item>
-      <a-menu-item key="4">角色管理</a-menu-item>
-      <a-menu-item key="5">权限管理</a-menu-item>
-    </a-sub-menu> -->
+
   </a-menu>
 </template>
 
