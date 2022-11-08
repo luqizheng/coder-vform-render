@@ -35,7 +35,8 @@
 
 <script>
   import i18n from "../../../utils/i18n"
-  import containerMixin from "@/widget/form-widget/container-widget/containerMixin"
+  import containerMixin from "./containerMixin";
+
   import ContainerWrapper from "./container-wrapper";
   import TableCellWidget from "./table-cell-widget"
   import refMixinDesign from "../../refMixinDesign"

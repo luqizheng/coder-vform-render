@@ -18,7 +18,8 @@
 import emitter from '../../utils/emitter';
 import fieldMixin from '../form-widget/field-widget/fieldMixin';
 import i18n from '../../utils/i18n';
-import StaticContentWrapper from '../form-widget/field-widget/static-content-wrapper.vue'
+import StaticContentWrapper from "../form-widget/field-widget/static-content-wrapper.vue";
+
 export default {
   name: "static-text-widget",
   componentName: "FieldWidget", //必须固定为FieldWidget，用于接收父级组件的broadcast事件

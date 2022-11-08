@@ -26,7 +26,7 @@ export {
 /*
 内置的widget
 */
-import { addWidget as AddWidget } from './widget-setup' from './widget-setup'
+import { addWidget as AddWidget } from './widget-setup'
 
 import basicWidget from './widgets/basic-widget'
 import formContainer from './widgets/form-widget/container-widget'

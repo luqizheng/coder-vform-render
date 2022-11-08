@@ -19,7 +19,8 @@ import i18n from "@/utils/i18n";
 import emitter from "../../utils/emitter";
 import fieldMixin from "../form-widget/field-widget/fieldMixin";
 
-import StaticContentWrapper from "@/widgets/form-widget/static-content-wrapper";
+
+import StaticContentWrapper from "../form-widget/field-widget/static-content-wrapper.vue";
 
 export default {
   name: "html-text-widget",

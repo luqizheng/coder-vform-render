@@ -2,11 +2,13 @@
 interface IFieldCompoents {
     [key: string]: any;
 }
-export const FieldCompoents: IFieldCompoents =
+export const FieldComponents: IFieldCompoents =
 {
 
 }
 /**添加widget */
 export const addWidget = (name: string, widget: any): void => {
-    FieldCompoents[name] = widget;
+    FieldComponents[name] = widget;
 }
+
+export default FieldComponents
