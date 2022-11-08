@@ -47,7 +47,8 @@
   import i18n from "../../../utils/i18n"
   import containerMixin from "./containerMixin"
   import ContainerWrapper from "./container-wrapper";
-  import FieldComponents from '@/widgets/form-widget/field-widget/index'
+  import FieldComponents from '../../../widget-setup'
+  
   import refMixinDesign from "../../refMixinDesign"
 
   export default {

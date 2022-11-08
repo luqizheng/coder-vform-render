@@ -56,7 +56,8 @@
 
 <script>
   import i18n from "../../../utils/i18n"
-  import FieldComponents from '@/components/form-designer/form-widget/field-widget/index'
+  import FieldComponents from '../../../widget-setup'
+  
   import refMixinDesign from "../../refMixinDesign"
 
   export default {
