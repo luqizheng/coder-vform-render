@@ -79,13 +79,12 @@
 
 <script>
 import i18n from "../../../utils/i18n";
+import containerMixin from "./containerMixin";
 
-import containerItemMixin from "../../../form-render/container-item/containerItemMixin";
-
-import { SvgIcon } from "../../..";
+import SvgIcon from "@/svg-icon";
 export default {
   name: "container-wrapper",
-  components: { svgIcon },
+  components: { SvgIcon },
   mixins: [i18n, containerMixin],
   props: {
     widget: Object,

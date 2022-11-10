@@ -6,9 +6,11 @@ import VFormRender from './form-render/index.vue'
 import ContainerItems from './form-render/container-item/index'
 import ContainerWidgets from './widgets/basic-widget/index'
 
+
+
+
 //coder changed
 import SvgIcon1 from "./svg-icon/index.vue";
-
 import FormItemWrapper1 from "./widgets/form-widget/field-widget/form-item-wrapper.vue";
 import ContainerMixin1 from "./widgets/form-widget/container-widget/containerMixin"
 import ContainerWrapper1 from "./widgets/form-widget/container-widget/container-wrapper.vue"
@@ -23,13 +25,18 @@ export {
     addZhCNSetting as add_zh_cn_label, addLangSetting, addLangLabel
 } from "./utils/i18n";
 
+
 /*
 内置的widget
 */
 import { addWidget as AddWidget } from './widget-setup'
-
 import basicWidget from './widgets/basic-widget'
 import formContainer from './widgets/form-widget/container-widget'
+import fieldWidgets from './widgets/form-widget/field-widget'
+//schema
+import HtmlTextWidget from './widgets/basic-widget/html-text-widget.js'
+import StaticTextWidget from './widgets/basic-widget/static-text-widget.js'
+import { schema } from './widgets/form-widget/field-widget/index.js'
 
 
 // 设计的design
@@ -46,15 +53,20 @@ export const ContainerMixin = ContainerMixin1
 export const ContainerWrapper = ContainerWrapper1
 export const StaticContentWrapper = staticContentWrapper
 export const util = Util
+export const GetBasicSchema = () => {
+    return Object.assign(schema, {
+        HtmlTextWidget,
+        StaticTextWidget,
 
-
+    })
+}
 
 VFormRender.install = (app: App) => {
     app.component(VFormRender.name, VFormRender)
     app.use(basicWidget).use(formContainer)
     basicWidget.install(app);
     formContainer.install(app);
-
+    fieldWidgets.install(app);
 }
 
 export default VFormRender 
