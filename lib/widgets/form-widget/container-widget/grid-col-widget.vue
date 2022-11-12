@@ -93,9 +93,9 @@
 <script>
 import i18n from "../../../utils/i18n";
 import refMixinDesign from "../../refMixinDesign";
-import FieldComponents from '../../../widget-setup'
-  
-import { SvgIcon } from "../../..";
+import FieldComponents from "../../../widget-setup";
+
+import svgIcon from "../../../svg-icon";
 
 export default {
   name: "GridColWidget",
@@ -104,7 +104,7 @@ export default {
   inject: ["refList"],
   components: {
     svgIcon,
-    ...FieldComponents
+    ...FieldComponents,
   },
   props: {
     widget: Object,
