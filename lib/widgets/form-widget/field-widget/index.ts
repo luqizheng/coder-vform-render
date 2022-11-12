@@ -4,6 +4,9 @@ export const schema = new Map<string, IScheam>();
 
 const schemaFiles = import.meta.glob('./*.js', { eager: true, import: 'default' })
 for (const path in schemaFiles) {
+
+  if (path == "./fieldMixin.js")
+    continue;
   let widgetSchema = schemaFiles[path] as IScheam;
   schema.set(path, widgetSchema);
 }
