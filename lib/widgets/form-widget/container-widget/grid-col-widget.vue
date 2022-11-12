@@ -94,15 +94,14 @@
 import i18n from "../../../utils/i18n";
 import refMixinDesign from "../../refMixinDesign";
 
-import svgIcon from "../../../svg-icon";
-
+import SvgIcon from '@/svg-icon'
 export default {
   name: "GridColWidget",
   componentName: "GridColWidget",
   mixins: [i18n, refMixinDesign],
   inject: ["refList"],
   components: {
-    svgIcon,
+    SvgIcon,
 
   },
   props: {

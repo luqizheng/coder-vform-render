@@ -56,7 +56,7 @@
 
 <script>
   import i18n from "../../../utils/i18n"
-
+  import SvgIcon from '@/svg-icon'
   import refMixinDesign from "../../refMixinDesign"
 
   export default {
@@ -65,7 +65,7 @@
     mixins: [i18n, refMixinDesign],
     inject: ['refList'],
     components: {
-    
+      SvgIcon
     },
     props: {
       widget: Object,

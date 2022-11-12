@@ -81,7 +81,7 @@ import i18n from "../../../utils/i18n";
 import fieldMixin from "./fieldMixin";
 import FormItemWrapper from "./form-item-wrapper.vue";
 import {deepClone} from "../../../utils/util"
-
+import svgIcon from '@/svg-icon'
 export default {
   name: "picture-upload-widget",
   componentName: "FieldWidget", //必须固定为FieldWidget，用于接收父级组件的broadcast事件
@@ -112,7 +112,7 @@ export default {
     },
   },
   components: {
-    FormItemWrapper,
+    FormItemWrapper,svgIcon
   },
   data() {
     return {

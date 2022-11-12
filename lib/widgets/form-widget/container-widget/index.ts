@@ -1,10 +1,11 @@
 const modules = import.meta.glob('./*.vue', { eager: true, import: 'default' })
 
 export default {
-  install(app) {
+  install(app: any) {
     for (const path in modules) {
-      let cname = modules[path].name
-      app.component(cname, modules[path])
+      let comp = modules[path] as any;
+
+      app.component(comp.name, modules[path])
     }
   }
 }

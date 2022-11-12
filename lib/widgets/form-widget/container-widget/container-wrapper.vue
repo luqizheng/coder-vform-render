@@ -81,7 +81,7 @@
 import i18n from "../../../utils/i18n";
 import containerMixin from "./containerMixin";
 
-import SvgIcon from "@/svg-icon";
+import SvgIcon from '@/svg-icon'
 export default {
   name: "container-wrapper",
   components: { SvgIcon },

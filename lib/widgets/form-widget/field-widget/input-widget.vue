@@ -23,7 +23,7 @@
 </template>
 
 <script>
-
+  import svgIcon from '@/svg-icon'
 import emitter from "../../../utils/emitter";
 import i18n from "../../../utils/i18n";
 import fieldMixin from "./fieldMixin";
@@ -59,7 +59,7 @@ import FormItemWrapper from "./form-item-wrapper.vue";
 
     },
     components: {
-      FormItemWrapper,
+      FormItemWrapper,svgIcon
     },
     data() {
       return {

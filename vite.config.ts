@@ -26,7 +26,7 @@ export default defineConfig({
   build: {
     lib: {
       entry: path.resolve(__dirname, "lib/index"),
-      name: "coder-notification-client",
+      name: "coder-vform-render",
       fileName: (format) => `index.${format}.js`,
     },
     rollupOptions: {

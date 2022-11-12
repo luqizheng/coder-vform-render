@@ -5,7 +5,11 @@ export declare type Options = {
 export declare interface IWidgetScheam {
     type: string
     icon: string
-    formItemFlag: boolean,
+    formItemFlag: boolean | undefined,
     options: object,
     col: Array<any> | undefined
+}
+
+export declare interface IWidgetContainerSchema extends IWidgetScheam {
+    widgetList: Array<any>,
 }
