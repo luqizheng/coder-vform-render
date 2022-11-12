@@ -93,7 +93,6 @@
 <script>
 import i18n from "../../../utils/i18n";
 import refMixinDesign from "../../refMixinDesign";
-import FieldComponents from "../../../widget-setup";
 
 import svgIcon from "../../../svg-icon";
 
@@ -104,7 +103,7 @@ export default {
   inject: ["refList"],
   components: {
     svgIcon,
-    ...FieldComponents,
+
   },
   props: {
     widget: Object,

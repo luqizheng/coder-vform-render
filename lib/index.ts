@@ -6,9 +6,6 @@ import VFormRender from './form-render/index.vue'
 import ContainerItems from './form-render/container-item/index'
 import ContainerWidgets from './widgets/basic-widget/index'
 
-
-
-
 //coder changed
 import SvgIcon1 from "./svg-icon/index.vue";
 import FormItemWrapper1 from "./widgets/form-widget/field-widget/form-item-wrapper.vue";
@@ -26,10 +23,7 @@ export {
 } from "./utils/i18n";
 
 
-/*
-内置的widget
-*/
-import { addWidget as AddWidget } from './widget-setup'
+
 import basicWidget from './widgets/basic-widget'
 import formContainer from './widgets/form-widget/container-widget'
 import fieldWidgets from './widgets/form-widget/field-widget'
@@ -39,10 +33,9 @@ import StaticTextWidget from './widgets/basic-widget/static-text-widget.js'
 import { schema } from './widgets/form-widget/field-widget/index.js'
 
 
+
 // 设计的design
 
-
-export const addWidget = AddWidget;
 export const SvgIcon = SvgIcon1
 export const emitter = emitter1
 export const i18n = i18n1

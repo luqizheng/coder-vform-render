@@ -47,8 +47,7 @@
   import i18n from "../../../utils/i18n"
   import containerMixin from "./containerMixin"
   import ContainerWrapper from "./container-wrapper";
-  import FieldComponents from '../../../widget-setup'
-  
+
   import refMixinDesign from "../../refMixinDesign"
 
   export default {
@@ -58,7 +57,7 @@
     inject: ['refList'],
     components: {
       ContainerWrapper,
-      ...FieldComponents,
+
     },
     props: {
       widget: Object,

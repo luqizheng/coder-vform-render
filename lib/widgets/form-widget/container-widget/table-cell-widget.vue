@@ -56,8 +56,7 @@
 
 <script>
   import i18n from "../../../utils/i18n"
-  import FieldComponents from '../../../widget-setup'
-  
+
   import refMixinDesign from "../../refMixinDesign"
 
   export default {
@@ -66,7 +65,7 @@
     mixins: [i18n, refMixinDesign],
     inject: ['refList'],
     components: {
-      ...FieldComponents,
+    
     },
     props: {
       widget: Object,
