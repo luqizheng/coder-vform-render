@@ -1,3 +1,5 @@
+import { IWidgetScheam } from "../../types";
+
 export default {
     type: 'html-text',
     icon: 'html-text',
@@ -13,4 +15,4 @@ export default {
         onCreated: '',
         onMounted: '',
     },
-}
+} as IWidgetScheam

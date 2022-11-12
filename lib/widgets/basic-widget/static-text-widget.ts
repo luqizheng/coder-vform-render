@@ -1,3 +1,5 @@
+import { IWidgetScheam } from "../../types";
+
 export default {
     type: 'static-text',
     icon: 'static-text',
@@ -13,4 +15,4 @@ export default {
       onCreated: '',
       onMounted: '',
     },
-  }
+  }as IWidgetScheam

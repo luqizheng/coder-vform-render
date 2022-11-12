@@ -69,7 +69,7 @@
   import refMixin from '../refMixin'
   import ContainerItemWrapper from './container-item-wrapper'
   import containerItemMixin from './containerItemMixin'
-
+import { SvgIcon } from '../..'
   import eventBus from "@/utils/event-bus"
 
   export default {
@@ -77,7 +77,7 @@
     componentName: 'ContainerItem',
     mixins: [emitter, i18n, refMixin, containerItemMixin],
     components: {
-      ContainerItemWrapper,
+      ContainerItemWrapper,SvgIcon
     
     },
     props: {

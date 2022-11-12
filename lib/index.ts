@@ -1,11 +1,11 @@
 export * from './types'
 import { App } from 'vue'
-import { Options } from './types'
+import { IWidgetScheam, Options } from './types'
 
 import VFormRender from './form-render/index.vue'
 import ContainerItems from './form-render/container-item/index'
 import ContainerWidgets from './widgets/basic-widget/index'
-import validators  from './utils/validators'
+import validators from './utils/validators'
 
 //coder changed
 import SvgIcon1 from "./svg-icon/index.vue";
@@ -14,13 +14,15 @@ import ContainerMixin1 from "./widgets/form-widget/container-widget/containerMix
 import ContainerWrapper1 from "./widgets/form-widget/container-widget/container-wrapper.vue"
 import staticContentWrapper from './widgets/form-widget/field-widget/static-content-wrapper.vue'
 import emitter1 from "./utils/emitter";
-import i18n1, { translate as translate1 } from "./utils/i18n";
+
+import i18n1, { translate as translate1, changeLocale } from "./utils/i18n";
 import fieldMixin1 from "./widgets/form-widget/field-widget/fieldMixin";
 import * as  Util from './utils/util'
 export {
     addENUSLabel as add_en_us_label, addENUSSetting as add_en_us_setting,
     addZhCNLabel as add_zh_cn_setting,
-    addZhCNSetting as add_zh_cn_label, addLangSetting, addLangLabel
+    addZhCNSetting as add_zh_cn_label, addLangSetting, addLangLabel,
+    changeLocale
 } from "./utils/i18n";
 
 
@@ -47,12 +49,10 @@ export const ContainerMixin = ContainerMixin1
 export const ContainerWrapper = ContainerWrapper1
 export const StaticContentWrapper = staticContentWrapper
 export const util = Util
-export const GetBasicSchema = () => {
-    return Object.assign(schema, {
-        HtmlTextWidget,
-        StaticTextWidget,
-
-    })
+export const GetBasicSchema = (): Map<string, IWidgetScheam> => {
+    schema.set("HtmlTextWidget", HtmlTextWidget);
+    schema.set("StaticTextWidget", StaticTextWidget)
+    return schema;
 }
 
 VFormRender.install = (app: App) => {
