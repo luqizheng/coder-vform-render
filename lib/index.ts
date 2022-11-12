@@ -1,6 +1,7 @@
 export * from './types'
 import { App } from 'vue'
-import { IWidgetScheam, Options } from './types'
+import { IWidgetScheam } from './types'
+import './styles/global.scss'
 
 import VFormRender from './form-render/index.vue'
 import ContainerItems from './form-render/container-item/index'

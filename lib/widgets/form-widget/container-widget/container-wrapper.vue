@@ -104,7 +104,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../../../styles/index.scss";
+
 .container-wrapper {
   position: relative;
   margin-bottom: 5px;

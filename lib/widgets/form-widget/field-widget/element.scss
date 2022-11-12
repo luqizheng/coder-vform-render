@@ -1,27 +1,4 @@
-/* 全局css变量 */
-$--color-primary: #409eff;
-
-.primary-color {
-  color: $--color-primary;
-}
-/*
-.background-opacity {
-  background: rgba(64, 158, 255, 0.6);
-}*/
-
-.form-widget-list {
-  .ghost {
-    content: "";
-    font-size: 0;
-    height: 3px;
-    box-sizing: border-box;
-    background: $--color-primary;
-    border: 2px solid $--color-primary;
-    outline-width: 0;
-    padding: 0;
-    overflow: hidden;
-  }
-}
+@import "../../../styles/index.scss";
 
 .el-form-item {
   .el-rate {
