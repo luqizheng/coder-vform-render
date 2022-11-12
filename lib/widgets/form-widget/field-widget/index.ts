@@ -1,14 +1,12 @@
-import { IWidgetScheam } from "../../../types";
+import { IScheam } from "../../../types";
 
-
-
-export const schema = new Map<string, IWidgetScheam>();
+export const schema = new Map<string, IScheam>();
 
 const schemaFiles = import.meta.glob('./*.js', { eager: true, import: 'default' })
 
 
 for (const path in schemaFiles) {
-  let widgetSchema = schemaFiles[path] as IWidgetScheam;
+  let widgetSchema = schemaFiles[path] as IScheam;
   schema.set(path, widgetSchema);
 }
 const modules = import.meta.glob('./*.vue', { eager: true, import: 'default' })
