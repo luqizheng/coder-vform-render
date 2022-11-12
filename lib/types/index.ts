@@ -14,11 +14,11 @@ export declare type IScheam = {
 export declare interface IWidgetScheam extends IScheam {
 
     /**是否需嵌套于el-form-item */
-    formItemFlag: boolean | undefined,
+    formItemFlag: boolean
 
 
 }
 
-export declare interface IWidgetContainerSchema extends IWidgetScheam {
+export declare interface IWidgetContainerSchema extends IScheam {
     widgetList: Array<any>,
 }

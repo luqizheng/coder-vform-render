@@ -1,6 +1,6 @@
 export * from './types'
 import { App } from 'vue'
-import { IWidgetScheam } from './types'
+import { IScheam, IWidgetScheam } from './types'
 import './styles/global.scss'
 
 import VFormRender from './form-render/index.vue'
@@ -43,7 +43,7 @@ export const translate = translate1
 export const fieldMixin = fieldMixin1
 export const SvgIcon = SvgIcon1
 export const util = Util
-export const GetBasicSchema = (): Map<string, IWidgetScheam> => {
+export const GetBasicSchema = (): Map<string, IScheam> => {
     schema.set("HtmlTextWidget", HtmlTextWidgetSchema);
     schema.set("StaticTextWidget", StaticTextWidgetSchema)
     return schema;
