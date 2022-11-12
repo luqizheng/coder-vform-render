@@ -5,6 +5,7 @@ import { Options } from './types'
 import VFormRender from './form-render/index.vue'
 import ContainerItems from './form-render/container-item/index'
 import ContainerWidgets from './widgets/basic-widget/index'
+import validators  from './utils/validators'
 
 //coder changed
 import SvgIcon1 from "./svg-icon/index.vue";
@@ -32,7 +33,7 @@ import HtmlTextWidget from './widgets/basic-widget/html-text-widget.js'
 import StaticTextWidget from './widgets/basic-widget/static-text-widget.js'
 import { schema } from './widgets/form-widget/field-widget/index.js'
 
-
+export const Validators = validators
 
 // 设计的design
 
