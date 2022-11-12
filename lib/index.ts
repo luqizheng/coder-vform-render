@@ -31,12 +31,11 @@ export {
 import HtmlTextWidgetSchema from './widgets/basic-widget/html-text-widget.js'
 import StaticTextWidgetSchema from './widgets/basic-widget/static-text-widget.js'
 import { schema } from './widgets/form-widget/field-widget/index.js'
+import { schema as containerSchema } from './widgets/form-widget/container-widget/index'
+
+// 设计需要到处胡函数
 
 export const Validators = validators
-
-// 设计的design
-
-
 export const emitter = emitter1
 export const i18n = i18n1
 export const translate = translate1
@@ -46,6 +45,9 @@ export const util = Util
 export const GetBasicSchema = (): Map<string, IScheam> => {
     schema.set("HtmlTextWidget", HtmlTextWidgetSchema);
     schema.set("StaticTextWidget", StaticTextWidgetSchema)
+    containerSchema.forEach((value, key) => {
+        schema.set(key, value);
+    })
     return schema;
 }
 

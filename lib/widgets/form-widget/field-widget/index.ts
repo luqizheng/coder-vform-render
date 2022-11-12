@@ -3,14 +3,13 @@ import { IScheam } from "../../../types";
 export const schema = new Map<string, IScheam>();
 
 const schemaFiles = import.meta.glob('./*.js', { eager: true, import: 'default' })
-
-
 for (const path in schemaFiles) {
   let widgetSchema = schemaFiles[path] as IScheam;
   schema.set(path, widgetSchema);
 }
-const modules = import.meta.glob('./*.vue', { eager: true, import: 'default' })
 
+
+const modules = import.meta.glob('./*.vue', { eager: true, import: 'default' })
 export default {
   install(app: any) {
     for (const path in modules) {
