@@ -1,7 +1,7 @@
 
 
 
-export class WidgetManger {
+export class WidgetPanelManger {
 
   containerFields = new Array<object>()
 
@@ -28,5 +28,5 @@ export class WidgetManger {
 }
 
 
-const widgetManager = new WidgetManger();
+const widgetManager = new WidgetPanelManger();
 export default widgetManager;
