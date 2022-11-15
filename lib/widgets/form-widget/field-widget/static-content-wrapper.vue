@@ -69,7 +69,7 @@ import i18n from "../../../utils/i18n";
 import SvgIcon from "../../../svg-icon";
 export default {
   name: "static-content-wrapper",
-  components: { svgIcon },
+  components: { SvgIcon },
   mixins: [i18n],
   props: {
     field: Object,
