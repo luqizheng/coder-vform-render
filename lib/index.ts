@@ -6,6 +6,11 @@ import './styles/global.scss'
 import VFormRender from './form-render/index.vue'
 import ContainerItems from './form-render/container-item/index'
 
+//schema
+import { schema } from "./widgets/form-widget/field-widget"
+import { schema as schema1 } from './widgets/form-widget/container-widget'
+
+
 //Compoents
 import FieldWidget from './widgets/form-widget/field-widget/index'
 import ContainerWidget from './widgets/form-widget/container-widget/index'
@@ -16,6 +21,7 @@ import validators from './utils/validators'
 import SvgIcon1 from "./svg-icon/index.vue";
 
 
+//api
 import emitter1 from "./utils/emitter";
 
 import i18n1, { translate as translate1 } from "./utils/i18n";
@@ -40,9 +46,19 @@ export const fieldMixin = fieldMixin1
 export const SvgIcon = SvgIcon1
 export const util = Util
 
+/**
+ * 获取schema定义。
+ * @returns schema 胡定义
+ */
+export const getSchemas = (): Map<string, IScheam> => {
+    schema1.forEach((value, key) => {
+        schema.set(key, value);
+    })
+    return schema
+}
 
 VFormRender.install = (app: App) => {
-    
+
     app.component(VFormRender.name, VFormRender)
         .use(ContainerItems)
         .use(ContainerWidget)
