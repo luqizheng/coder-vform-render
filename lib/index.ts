@@ -8,12 +8,9 @@ import ContainerItems from './form-render/container-item/index'
 
 //schema
 import { schema } from "./widgets/form-widget/field-widget"
-import { schema as schema1 } from './widgets/form-widget/container-widget'
-
 
 //Compoents
 import FieldWidget from './widgets/form-widget/field-widget/index'
-import ContainerWidget from './widgets/form-widget/container-widget/index'
 
 import validators from './utils/validators'
 
@@ -51,9 +48,7 @@ export const util = Util
  * @returns schema 胡定义
  */
 export const getSchemas = (): Map<string, IScheam> => {
-    schema1.forEach((value, key) => {
-        schema.set(key, value);
-    })
+
     return schema
 }
 
@@ -61,7 +56,6 @@ VFormRender.install = (app: any) => {
 
     app.component(VFormRender.name, VFormRender)
         .use(ContainerItems)
-        .use(ContainerWidget)
         .use(FieldWidget)
 
 }
