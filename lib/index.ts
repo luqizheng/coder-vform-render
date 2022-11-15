@@ -1,5 +1,5 @@
 export * from './types'
-import widgetManager from './widgetManager'
+import { WidgetPanelManger } from "./types";
 
 import './styles/global.scss'
 
@@ -43,13 +43,14 @@ export const translate = translate1
 export const fieldMixin = fieldMixin1
 export const SvgIcon = SvgIcon1
 export const util = Util
-export const WidgetManager = widgetManager;
+export const widgetManager = new WidgetPanelManger();
+
 
 
 VFormRender.install = (app: any) => {
     //widget 管理 由 render进行管理。
     schema.forEach(sc => {
-        WidgetManager.addContainerWidgetSchema(sc)
+        widgetManager.addContainerWidgetSchema(sc)
     })
 
 

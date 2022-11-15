@@ -32,3 +32,10 @@ export enum DesignPanelType {
     Advance,
     Customer
 }
+
+
+
+
+
+
+export * from './WidgetManager'
