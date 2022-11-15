@@ -1,2 +1,8 @@
 /* 全局css变量 */
 $--color-primary: #409eff;
+
+* {
+    //Firefox浏览器滚动条样式
+    scrollbar-color: #e5e5e5 #f7f7f9; //滚动条轨道颜色、滚动条滑块的颜色
+    scrollbar-width: thin; //thin模式下滚动条两端的三角按钮会消失
+  }
