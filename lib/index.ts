@@ -1,5 +1,5 @@
 export * from './types'
-import { widgetManager as WidgetManger } from './widgetManager'
+import  widgetManager  from './widgetManager'
 import { IScheam, IWidgetScheam } from './types'
 import './styles/global.scss'
 
@@ -43,7 +43,7 @@ export const translate = translate1
 export const fieldMixin = fieldMixin1
 export const SvgIcon = SvgIcon1
 export const util = Util
-export const widgetManager = WidgetManger;
+export const WidgetManager = widgetManager;
 
 /**
  * 获取schema定义。
