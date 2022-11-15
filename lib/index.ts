@@ -5,9 +5,10 @@ import './styles/global.scss'
 
 import VFormRender from './form-render/index.vue'
 import ContainerItems from './form-render/container-item/index'
-//import BasicWidgets from './widgets/basic-widget/index'
-//import FieldWidget from './widgets/form-widget/field-widget/index'
-//import ContainerWidget from './widgets/form-widget/container-widget/index'
+
+//Compoents
+import FieldWidget from './widgets/form-widget/field-widget/index'
+import ContainerWidget from './widgets/form-widget/container-widget/index'
 
 import validators from './utils/validators'
 
@@ -41,8 +42,11 @@ export const util = Util
 
 
 VFormRender.install = (app: App) => {
+    
     app.component(VFormRender.name, VFormRender)
         .use(ContainerItems)
+        .use(ContainerWidget)
+        .use(FieldWidget)
 
 }
 
