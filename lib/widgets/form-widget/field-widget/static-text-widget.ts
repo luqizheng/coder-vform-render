@@ -1,5 +1,4 @@
-import { IWidgetScheam } from "../../types";
-
+import { IWidgetScheam } from "../../../types";
 
 
 export default {

@@ -15,10 +15,10 @@
 </template>
 
 <script>
-import emitter from '../../utils/emitter';
-import fieldMixin from '../form-widget/field-widget/fieldMixin';
-import i18n from '../../utils/i18n';
-import StaticContentWrapper from "../form-widget/field-widget/static-content-wrapper.vue";
+import emitter from '../../../utils/emitter';
+import fieldMixin from './fieldMixin';
+import i18n from '../../../utils/i18n';
+import StaticContentWrapper from "./static-content-wrapper.vue";
 
 export default {
   name: "static-text-widget",
@@ -79,5 +79,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../../styles/index.scss";
+@import "../../../styles/index.scss";
 </style>

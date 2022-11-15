@@ -57,7 +57,7 @@ export const getSchemas = (): Map<string, IScheam> => {
     return schema
 }
 
-VFormRender.install = (app: App) => {
+VFormRender.install = (app: any) => {
 
     app.component(VFormRender.name, VFormRender)
         .use(ContainerItems)

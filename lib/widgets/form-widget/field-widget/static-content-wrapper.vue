@@ -64,8 +64,9 @@
 </template>
 
 <script>
-import i18n from "@/utils/i18n";
-import svgIcon from "@/svg-icon";
+import i18n from "../../../utils/i18n";
+
+import SvgIcon from "../../../svg-icon";
 export default {
   name: "static-content-wrapper",
   components: { svgIcon },
