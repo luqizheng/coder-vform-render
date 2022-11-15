@@ -26,6 +26,8 @@
 </template>
 
 <script>
+  import {ElRow} from 'element-plus'
+
   import i18n from "../../../utils/i18n"
   
   import GridColWidget from "./grid-col-widget"
@@ -42,7 +44,7 @@
     inject: ['refList'],
     components: {
       ContainerWrapper,
-      GridColWidget
+      GridColWidget,ElRow
     },
     props: {
       widget: Object,

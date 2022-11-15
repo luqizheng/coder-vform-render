@@ -55,17 +55,18 @@
 </template>
 
 <script>
+  import { ElDropdown,ElDropdownItem} from "element-plus"
+
   import i18n from "../../../utils/i18n"
   import SvgIcon from '@/svg-icon'
   import refMixinDesign from "../../refMixinDesign"
-
   export default {
     name: "TableCellWidget",
     componentName: "TableCellWidget",
     mixins: [i18n, refMixinDesign],
     inject: ['refList'],
     components: {
-      SvgIcon
+      SvgIcon,ElDropdown,ElDropdownItem
     },
     props: {
       widget: Object,

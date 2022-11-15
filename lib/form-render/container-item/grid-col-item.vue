@@ -32,7 +32,10 @@
 </template>
 
 <script>
-  import emitter from '@/utils/emitter'
+
+  import
+
+  import emitter from '../../utils/emitter'
   import i18n from "../../utils/i18n"
   import refMixin from "../refMixin"
 
@@ -41,7 +44,7 @@
     componentName: 'ContainerItem',
     mixins: [emitter, i18n, refMixin],
     components: {
-    
+      
     },
     props: {
       widget: Object,

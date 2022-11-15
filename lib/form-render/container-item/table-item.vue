@@ -24,7 +24,7 @@
 </template>
 
 <script>
-  import emitter from '@/utils/emitter'
+  import emitter from '../../utils/emitter'
   import i18n from "../../utils/i18n"
   import refMixin from "../refMixin"
   import ContainerItemWrapper from './container-item-wrapper'

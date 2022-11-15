@@ -94,7 +94,9 @@
 import i18n from "../../../utils/i18n";
 import refMixinDesign from "../../refMixinDesign";
 
-import SvgIcon from '@/svg-icon'
+import { ElCol } from "element-plus";
+
+import SvgIcon from "@/svg-icon";
 export default {
   name: "GridColWidget",
   componentName: "GridColWidget",
@@ -102,7 +104,7 @@ export default {
   inject: ["refList"],
   components: {
     SvgIcon,
-
+    ElCol,
   },
   props: {
     widget: Object,

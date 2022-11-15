@@ -63,14 +63,14 @@
 </template>
 
 <script>
-  import emitter from '@/utils/emitter'
-  import i18n from '@/utils/i18n'
-  import {deepClone, generateId} from '@/utils/util'
+  import emitter from '../../utils/emitter'
+  import i18n from '../../utils/i18n'
+  import {deepClone, generateId} from '../../utils/util'
   import refMixin from '../refMixin'
   import ContainerItemWrapper from './container-item-wrapper'
   import containerItemMixin from './containerItemMixin'
-  import SvgIcon from '@/svg-icon'
-  import eventBus from "@/utils/event-bus"
+  import SvgIcon from '../../svg-icon'
+  import eventBus from "../../utils/event-bus"
 
   export default {
     name: "sub-form-item",

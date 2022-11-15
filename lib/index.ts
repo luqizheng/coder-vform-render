@@ -5,9 +5,9 @@ import './styles/global.scss'
 
 import VFormRender from './form-render/index.vue'
 import ContainerItems from './form-render/container-item/index'
-import BasicWidgets from './widgets/basic-widget/index'
-import FieldWidget from './widgets/form-widget/field-widget/index'
-import ContainerWidget from './widgets/form-widget/container-widget/index'
+//import BasicWidgets from './widgets/basic-widget/index'
+//import FieldWidget from './widgets/form-widget/field-widget/index'
+//import ContainerWidget from './widgets/form-widget/container-widget/index'
 
 import validators from './utils/validators'
 
@@ -27,11 +27,7 @@ export {
     changeLocale
 } from "./utils/i18n";
 
-//schema
-import HtmlTextWidgetSchema from './widgets/basic-widget/html-text-widget.js'
-import StaticTextWidgetSchema from './widgets/basic-widget/static-text-widget.js'
-import { schema } from './widgets/form-widget/field-widget/index.js'
-import { schema as containerSchema } from './widgets/form-widget/container-widget/index'
+
 
 // 设计需要到处胡函数
 
@@ -42,23 +38,11 @@ export const translate = translate1
 export const fieldMixin = fieldMixin1
 export const SvgIcon = SvgIcon1
 export const util = Util
-export const GetBasicSchema = (): Map<string, IScheam> => {
-    schema.set("HtmlTextWidget", HtmlTextWidgetSchema);
-    schema.set("StaticTextWidget", StaticTextWidgetSchema)
-    containerSchema.forEach((value, key) => {
-        schema.set(key, value);
-    })
-    return schema;
-}
+
 
 VFormRender.install = (app: App) => {
     app.component(VFormRender.name, VFormRender)
         .use(ContainerItems)
-        .use(BasicWidgets)
-        .use(FieldWidget)
-        .use(ContainerWidget)
-
-    //app.component('svg-icon', SvgIcon)
 
 }
 
