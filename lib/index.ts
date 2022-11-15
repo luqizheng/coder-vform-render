@@ -1,6 +1,6 @@
 export * from './types'
-import  widgetManager  from './widgetManager'
-import { IScheam, IWidgetScheam } from './types'
+import widgetManager from './widgetManager'
+
 import './styles/global.scss'
 
 import VFormRender from './form-render/index.vue'
@@ -45,15 +45,13 @@ export const SvgIcon = SvgIcon1
 export const util = Util
 export const WidgetManager = widgetManager;
 
-/**
- * 获取schema定义。
- * @returns schema 胡定义
- */
-export const getSchemas = (): Map<string, IScheam> => {
-    return schema
-}
 
 VFormRender.install = (app: any) => {
+    //widget 管理 由 render进行管理。
+    schema.forEach(sc => {
+        WidgetManager.addContainerWidgetSchema(sc)
+    })
+
 
     app.component(VFormRender.name, VFormRender)
         .use(ContainerItems)
