@@ -2,7 +2,7 @@ export declare type IScheam = {
     /*字段组件的类型名称，必须唯一，不能跟已有组件重复；*/
     type: string
     /**
-     * 
+     * icon
      */
     icon: string
     /**
@@ -11,6 +11,9 @@ export declare type IScheam = {
     options: object,
 }
 
+/**
+ * WidgetSchema
+ */
 export declare interface IWidgetScheam extends IScheam {
 
     /**是否需嵌套于el-form-item */
@@ -21,4 +24,11 @@ export declare interface IWidgetScheam extends IScheam {
 
 export declare interface IWidgetContainerSchema extends IScheam {
     widgetList: Array<any>,
+}
+
+export enum DesignPanelType {
+    Container,
+    Basic,
+    Advance,
+    Customer
 }

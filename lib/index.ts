@@ -1,5 +1,5 @@
 export * from './types'
-import { App } from 'vue'
+import { widgetManager as WidgetManger } from './widgetManager'
 import { IScheam, IWidgetScheam } from './types'
 import './styles/global.scss'
 
@@ -16,6 +16,7 @@ import validators from './utils/validators'
 
 //coder changed
 import SvgIcon1 from "./svg-icon/index.vue";
+
 
 
 //api
@@ -42,13 +43,13 @@ export const translate = translate1
 export const fieldMixin = fieldMixin1
 export const SvgIcon = SvgIcon1
 export const util = Util
+export const widgetManager = WidgetManger;
 
 /**
  * 获取schema定义。
  * @returns schema 胡定义
  */
 export const getSchemas = (): Map<string, IScheam> => {
-
     return schema
 }
 
