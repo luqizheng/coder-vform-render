@@ -46,13 +46,13 @@
     getAllFieldWidgets, traverseFieldWidgets, buildDefaultFormJson
   } from "../utils/util"
   import i18n, { changeLocale } from "../utils/i18n"
-  const components =widgetManager.components
+  
   export default {
     name: "VFormRender",
     componentName: 'VFormRender',
     mixins: [emitter, i18n],
     components: {
-      ...components
+      ...widgetManager.components
     },
     props: {
       formJson: { //prop传入的表单JSON配置
