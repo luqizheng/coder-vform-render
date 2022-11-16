@@ -71,14 +71,15 @@
   import containerItemMixin from './containerItemMixin'
   import SvgIcon from '../../svg-icon'
   import eventBus from "../../utils/event-bus"
-
+  import { widgetManager } from '../../index'
   export default {
     name: "sub-form-item",
     componentName: 'ContainerItem',
     mixins: [emitter, i18n, refMixin, containerItemMixin],
     components: {
       ContainerItemWrapper,
-      SvgIcon
+      SvgIcon,
+      ...widgetManager.components
     },
     props: {
       widget: Object,

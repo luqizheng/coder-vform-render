@@ -6,18 +6,13 @@ import './styles/global.scss'
 import VFormRender from './form-render/index.vue'
 import ContainerItems from './form-render/container-item/index'
 
-//schema
-import { schema } from "./widgets/form-widget/field-widget"
 
-//Compoents
-import FieldWidget from './widgets/form-widget/field-widget/index'
+
 
 import validators from './utils/validators'
 
 //coder changed
 import SvgIcon1 from "./svg-icon/index.vue";
-
-
 
 //api
 import emitter1 from "./utils/emitter";
@@ -31,8 +26,6 @@ export {
     addZhCNSetting as add_zh_cn_label, addLangSetting, addLangLabel,
     changeLocale
 } from "./utils/i18n";
-
-
 
 // 设计需要到处胡函数
 
@@ -48,15 +41,12 @@ export const widgetManager = new WidgetPanelManger();
 
 
 VFormRender.install = (app: any) => {
-    //widget 管理 由 render进行管理。
-    schema.forEach(sc => {
-        widgetManager.addContainerWidgetSchema(sc)
-    })
+
 
 
     app.component(VFormRender.name, VFormRender)
         .use(ContainerItems)
-        .use(FieldWidget)
+
 
 }
 

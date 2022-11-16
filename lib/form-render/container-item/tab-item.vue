@@ -39,14 +39,15 @@
   import refMixin from "../refMixin"
   import ContainerItemWrapper from './container-item-wrapper'
   import containerItemMixin from "./containerItemMixin";
-  
+  import { widgetManager } from '../../index'
 
   export default {
     name: "tab-item",
     componentName: 'ContainerItem',
     mixins: [emitter, i18n, refMixin, containerItemMixin],
     components: {
-      ContainerItemWrapper
+      ContainerItemWrapper,
+      widgetManager.
     },
     props: {
       widget: Object,

@@ -40,7 +40,7 @@
   //import ElForm from 'element-ui/packages/form/src/form.vue'  /* 用于源码调试Element UI */
   import emitter from '../utils/emitter'
   import './container-item/index'
-
+  import { widgetManager } from '..'
   import {
     generateId, deepClone, insertCustomCssToHead, insertGlobalFunctionsToHtml, getAllContainerWidgets,
     getAllFieldWidgets, traverseFieldWidgets, buildDefaultFormJson
@@ -52,6 +52,7 @@
     componentName: 'VFormRender',
     mixins: [emitter, i18n],
     components: {
+      ...widgetManager.compoents
     },
     props: {
       formJson: { //prop传入的表单JSON配置
