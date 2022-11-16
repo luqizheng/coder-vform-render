@@ -12,7 +12,7 @@ export class WidgetPanelManger {
   customFields = new Array<object>();
 
 
-  compoents = new Array<DefineComponent<{}, {}, any>>();
+  components = new Array<DefineComponent<{}, {}, any>>();
 
   addCustomWidgetSchema(fieldSchema: object) {
     this.customFields.push(fieldSchema)
@@ -34,6 +34,6 @@ export class WidgetPanelManger {
   }
 
   addComponents(widgetCompoent: DefineComponent<{}, {}, any>) {
-    this.compoents.push(widgetCompoent);
+    this.components.push(widgetCompoent);
   }
 }

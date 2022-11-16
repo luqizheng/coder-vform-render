@@ -64,7 +64,8 @@ export default {
   componentName: "ContainerItem",
   mixins: [emitter, i18n, refMixin],
   components: {
-    ...widgetManager.components
+    ...widgetManager.compoents
+    
   },
   props: {
     widget: Object,
