@@ -71,7 +71,8 @@
   import containerItemMixin from './containerItemMixin'
   import SvgIcon from '../../svg-icon'
   import eventBus from "../../utils/event-bus"
-  import { widgetManager } from '../../index'
+  import widgetManager  from '../../WidgetManager'
+
   export default {
     name: "sub-form-item",
     componentName: 'ContainerItem',

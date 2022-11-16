@@ -1,5 +1,5 @@
 export * from './types'
-import { WidgetPanelManger } from "./types";
+import WidgetPanelManger from "./WidgetManager";
 
 import './styles/global.scss'
 
@@ -38,8 +38,7 @@ export const translate = translate1
 export const fieldMixin = fieldMixin1
 export const SvgIcon = SvgIcon1
 export const util = Util
-export const widgetManager = new WidgetPanelManger();
-
+export const widgetManager = WidgetPanelManger
 
 
 VFormRender.install = (app: any) => {

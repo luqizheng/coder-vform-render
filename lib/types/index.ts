@@ -33,9 +33,3 @@ export enum DesignPanelType {
     Customer
 }
 
-
-
-
-
-
-export * from './WidgetManager'

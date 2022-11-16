@@ -58,14 +58,14 @@
 import emitter from "../../utils/emitter";
 import i18n from "../../utils/i18n";
 import refMixin from "../refMixin";
-import { widgetManager } from '../../index'
+import widgetManager  from '../../WidgetManager'
+console.log(widgetManager)
 export default {
   name: "GridColItem",
   componentName: "ContainerItem",
   mixins: [emitter, i18n, refMixin],
   components: {
-    ...widgetManager.compoents
-    
+    ...widgetManager.components
   },
   props: {
     widget: Object,

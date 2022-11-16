@@ -39,8 +39,7 @@
   import refMixin from "../refMixin"
   import ContainerItemWrapper from './container-item-wrapper'
   import containerItemMixin from "./containerItemMixin";
-  import { widgetManager } from '../../index'
-
+  import widgetManager  from '../../WidgetManager'
   export default {
     name: "tab-item",
     componentName: 'ContainerItem',
