@@ -5,15 +5,10 @@ import './styles/global.scss'
 
 import VFormRender from './form-render/index.vue'
 import ContainerItems from './form-render/container-item/index'
-
-
-
-
 import validators from './utils/validators'
 
 //coder changed
 import SvgIcon1 from "./svg-icon/index.vue";
-
 //api
 import emitter1 from "./utils/emitter";
 
@@ -27,8 +22,15 @@ export {
     changeLocale
 } from "./utils/i18n";
 
-// 设计需要到处胡函数
 
+//扩展需要你用奥
+import formItemWrapper from './widgets/form-widget/field-widget/form-item-wrapper.vue'
+import staticContentWrapper from './widgets/form-widget/field-widget/static-content-wrapper.vue'
+
+export const FormItemWrapper=formItemWrapper
+export const StaticContentWrapper = staticContentWrapper
+
+// 设计需要到处胡函数
 export const Validators = validators
 export const emitter = emitter1
 export const i18n = i18n1
@@ -42,11 +44,8 @@ export const widgetManager = new WidgetPanelManger();
 
 VFormRender.install = (app: any) => {
 
-
-
     app.component(VFormRender.name, VFormRender)
         .use(ContainerItems)
-
 
 }
 
