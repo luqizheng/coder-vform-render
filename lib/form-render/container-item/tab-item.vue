@@ -47,7 +47,7 @@
     mixins: [emitter, i18n, refMixin, containerItemMixin],
     components: {
       ContainerItemWrapper,
-      widgetManager.
+      ...widgetManager.components
     },
     props: {
       widget: Object,
@@ -89,11 +89,8 @@
         }
       },
 
-    },
+    }
   }
 </script>
 
-<style lang="scss" scoped>
 
-
-</style>
