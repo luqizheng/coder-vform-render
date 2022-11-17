@@ -43,9 +43,6 @@ export const SvgIcon = SvgIcon1
 export const util = Util
 export const widgetManager = WidgetPanelManger
 
-
-}
-
 export default {
     install: (app: any) => {
         app.component(VFormRender.name, VFormRender)
