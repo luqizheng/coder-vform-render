@@ -16,9 +16,12 @@ import i18n1, { translate as translate1 } from "./utils/i18n";
 import fieldMixin1 from "./widgets/form-widget/field-widget/fieldMixin";
 import * as  Util from './utils/util'
 export {
-    addENUSLabel as add_en_us_label, addENUSSetting as add_en_us_setting,
-    addZhCNLabel as add_zh_cn_setting,
-    addZhCNSetting as add_zh_cn_label, addLangSetting, addLangLabel,
+    addENUSLabel as add_en_us_label,
+    addENUSSetting as add_en_us_setting,
+    addZhCNLabel as add_zh_cn_label,
+    addZhCNSetting as add_zh_cn_setting,
+    addLangSetting,
+    addLangLabel,
     changeLocale
 } from "./utils/i18n";
 
@@ -27,7 +30,7 @@ export {
 import formItemWrapper from './widgets/form-widget/field-widget/form-item-wrapper.vue'
 import staticContentWrapper from './widgets/form-widget/field-widget/static-content-wrapper.vue'
 
-export const FormItemWrapper=formItemWrapper
+export const FormItemWrapper = formItemWrapper
 export const StaticContentWrapper = staticContentWrapper
 
 // 设计需要到处胡函数
@@ -41,11 +44,11 @@ export const util = Util
 export const widgetManager = WidgetPanelManger
 
 
-VFormRender.install = (app: any) => {
-
-    app.component(VFormRender.name, VFormRender)
-        .use(ContainerItems)
-
 }
 
-export default VFormRender 
+export default {
+    install: (app: any) => {
+        app.component(VFormRender.name, VFormRender)
+            .use(ContainerItems)
+    }
+} 

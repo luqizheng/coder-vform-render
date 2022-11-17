@@ -84,6 +84,11 @@ export default {
     i18n2t(key1: string, key2: string) {
       return i18n.$st2(key1, key2)
     },
-
+  },
+  computed:{
+    i18nMessage(){
+      return i18n.messages;
+    }
   }
+  
 }
