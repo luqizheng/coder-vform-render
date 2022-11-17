@@ -6,7 +6,7 @@ import './styles/global.scss'
 import VFormRender from './form-render/index.vue'
 import ContainerItems from './form-render/container-item/index'
 import validators from './utils/validators'
-
+import BasicFieldWidget from './widgets/form-widget/field-widget/index'
 //coder changed
 import SvgIcon1 from "./svg-icon/index.vue";
 //api
@@ -26,7 +26,7 @@ export {
 } from "./utils/i18n";
 
 
-//扩展需要你用奥
+//扩展需要你
 import formItemWrapper from './widgets/form-widget/field-widget/form-item-wrapper.vue'
 import staticContentWrapper from './widgets/form-widget/field-widget/static-content-wrapper.vue'
 
@@ -47,6 +47,6 @@ export const widgetManager = WidgetPanelManger
 export default {
     install: (app: any) => {
         app.component(VFormRender.name, VFormRender)
-            .use(ContainerItems)
+            .use(ContainerItems).use(BasicFieldWidget)
     }
 } 

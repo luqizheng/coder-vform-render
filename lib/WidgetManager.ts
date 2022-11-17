@@ -38,4 +38,4 @@ export class WidgetManger {
     }
 }
 const widgetManager = new WidgetManger()
-export default new WidgetManger();
+export default widgetManager;
