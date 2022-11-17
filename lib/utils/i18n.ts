@@ -74,6 +74,14 @@ export const addLangLabel = (lang: string, prop: string, text: string) => {
   langResources[lang].extension.widgetLabel[prop] = text
 }
 
+export const i18nt = (key: string) => {
+  return i18n.$st(key)
+}
+
+export const i18n2t = (key1: string, key2: string) => {
+  return i18n.$st2(key1, key2)
+}
+
 export default {
   methods: {
     i18nt(key: string) {
@@ -85,10 +93,10 @@ export default {
       return i18n.$st2(key1, key2)
     },
   },
-  computed:{
-    i18nMessage(){
+  computed: {
+    i18nMessage() {
       return i18n.messages;
     }
   }
-  
+
 }
