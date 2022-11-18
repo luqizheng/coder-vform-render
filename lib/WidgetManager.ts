@@ -24,13 +24,13 @@ components[TableItem.name] = TableItem
 
 
 interface IComponentsSetting {
-    [key: string]: DefineComponent<{}, {}, any>
+    [key: string]: any
 }
 
 export class WidgetManger {
 
     constructor() {
-      
+
     }
 
     containerFields = new Array<IScheam>()
@@ -72,7 +72,7 @@ export class WidgetManger {
      * @param widgetCompoent widget组件
      * @param name widget名称
      */
-    addWidget(widgetCompoent: DefineComponent<{}, {}, any>, name: string | undefined = undefined) {
+    addWidget(widgetCompoent: DefineComponent<{}, {}, any> | any, name: string | undefined = undefined) {
         if (name)
             widgetCompoent.name = name;
         components[widgetCompoent.name] = widgetCompoent;
