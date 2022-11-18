@@ -1,4 +1,4 @@
-import { IScheam } from "coder-vform-render";
+
 import { DefineComponent } from "vue";
 //局部注册组件
 import SvgIcon from './svg-icon/index.vue'
@@ -10,6 +10,7 @@ import TabItem from './form-render/container-item/tab-item.vue'
 
 import TableCellItem from './form-render/container-item/table-cell-item.vue'
 import TableItem from './form-render/container-item/table-item.vue'
+import { IScheam } from "./types";
 
 export const components = {} as IWidgetComponents;
 /**

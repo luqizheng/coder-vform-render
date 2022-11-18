@@ -1,4 +1,4 @@
-import { IScheam } from "coder-vform-render";
+import { IScheam } from "../../../types";
 
 export default  {
     type: "lable-form",
