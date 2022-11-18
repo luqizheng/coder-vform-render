@@ -1,23 +1,11 @@
 <template>
-  <el-col
-    class="grid-cell"
-    :class="[customClass]"
-    v-bind="layoutProps"
-    :style="colHeightStyle"
-    :key="widget.id"
-    v-show="!widget.options.hidden"
-  >
+  <el-col class="grid-cell" :class="[customClass]" v-bind="layoutProps" :style="colHeightStyle" :key="widget.id"
+    v-show="!widget.options.hidden">
     <template v-if="!!widget.widgetList && widget.widgetList.length > 0">
       <template v-for="(subWidget, swIdx) in widget.widgetList">
         <template v-if="'container' === subWidget.category">
-          <component
-            :is="subWidget.type + '-item'"
-            :widget="subWidget"
-            :key="swIdx"
-            :parent-list="widget.widgetList"
-            :index-of-parent-list="swIdx"
-            :parent-widget="widget"
-          >
+          <component :is="subWidget.type + '-item'" :widget="subWidget" :key="swIdx" :parent-list="widget.widgetList"
+            :index-of-parent-list="swIdx" :parent-widget="widget">
             <!-- 递归传递插槽！！！ -->
             <template v-for="slot in Object.keys($slots)" v-slot:[slot]="scope">
               <slot :name="slot" v-bind="scope" />
@@ -25,15 +13,8 @@
           </component>
         </template>
         <template v-else>
-          <component
-            :is="subWidget.type + '-widget'"
-            :field="subWidget"
-            :designer="null"
-            :key="swIdx"
-            :parent-list="widget.widgetList"
-            :index-of-parent-list="swIdx"
-            :parent-widget="widget"
-          >
+          <component :is="subWidget.type + '-widget'" :field="subWidget" :designer="null" :key="swIdx"
+            :parent-list="widget.widgetList" :index-of-parent-list="swIdx" :parent-widget="widget">
             <!-- 递归传递插槽！！！ -->
             <template v-for="slot in Object.keys($slots)" v-slot:[slot]="scope">
               <slot :name="slot" v-bind="scope" />
@@ -46,7 +27,7 @@
       <el-col>
         <div class="blank-cell">
           <span class="invisible-content">{{
-            i18nt("render.hint.blankCellContent")
+              i18nt("render.hint.blankCellContent")
           }}</span>
         </div>
       </el-col>
@@ -58,13 +39,13 @@
 import emitter from "../../utils/emitter";
 import i18n from "../../utils/i18n";
 import refMixin from "../refMixin";
-import widgetManager  from '../../WidgetManager'
+import {components} from '../../WidgetManager'
 
 export default {
   name: "GridColItem",
   componentName: "ContainerItem",
   mixins: [emitter, i18n, refMixin],
-  components:Object.assign({},widgetManager.components),
+  components:()=> components,
   props: {
     widget: Object,
     parentWidget: Object,

@@ -10,12 +10,12 @@ import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
 
 import router from './router'
-import DevelopCompents from '../lib'
+import DevelopCompents, { widgetManager } from '../lib'
 
 // //自定义组件导入
-// import customerCompoents from './widget-example/index'
+import customerCompoents from './components/switch-widget'
 
-
+widgetManager.addWidget(customerCompoents)
 
 const app = createApp(App);
 app.use(DevelopCompents, { path: 'http://localhost:5000', request: axios })
