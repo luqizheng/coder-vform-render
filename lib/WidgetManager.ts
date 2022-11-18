@@ -49,7 +49,7 @@ export class WidgetManger {
     addWidget(widgetCompoent: DefineComponent<{}, {}, any>, name: string | undefined) {
         if (name)
             widgetCompoent.name = name;
-        widgetCompoent[widgetCompoent.name] = widgetCompoent;
+        this.components[widgetCompoent.name] = widgetCompoent;
     }
 }
 const widgetManager = new WidgetManger()
