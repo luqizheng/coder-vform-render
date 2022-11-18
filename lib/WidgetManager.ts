@@ -1,6 +1,9 @@
 import { IScheam } from "coder-vform-render";
 import { DefineComponent } from "vue";
 
+interface IComponentsSetting {
+    [key: string]: DefineComponent<{}, {}, any>
+}
 
 export class WidgetManger {
 
@@ -13,7 +16,7 @@ export class WidgetManger {
     customFields = new Array<IScheam>();
 
 
-    components = new Array<DefineComponent<{}, {}, any>>();
+    components = {} as IComponentsSetting;
 
     addCustomWidgetSchema(fieldSchema: IScheam) {
         this.customFields.push(fieldSchema)
@@ -46,7 +49,7 @@ export class WidgetManger {
     addWidget(widgetCompoent: DefineComponent<{}, {}, any>, name: string | undefined) {
         if (name)
             widgetCompoent.name = name;
-        this.components.push(widgetCompoent);
+        widgetCompoent[widgetCompoent.name] = widgetCompoent;
     }
 }
 const widgetManager = new WidgetManger()
