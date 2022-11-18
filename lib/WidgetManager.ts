@@ -1,39 +1,51 @@
+import { IScheam } from "coder-vform-render";
 import { DefineComponent } from "vue";
 
 
 export class WidgetManger {
 
-    containerFields = new Array<object>()
+    containerFields = new Array<IScheam>()
 
-    basicFields = new Array<object>()
+    basicFields = new Array<IScheam>()
 
-    advanceFields = new Array<object>()
+    advanceFields = new Array<IScheam>()
 
-    customFields = new Array<object>();
+    customFields = new Array<IScheam>();
 
 
     components = new Array<DefineComponent<{}, {}, any>>();
 
-    addCustomWidgetSchema(fieldSchema: object) {
+    addCustomWidgetSchema(fieldSchema: IScheam) {
         this.customFields.push(fieldSchema)
 
     }
 
-    addAdvanceFields(fieldSchema: object) {
+    addAdvanceFields(fieldSchema: IScheam) {
         this.advanceFields.push(fieldSchema)
 
     }
 
-    addBasicFieldSchema(fieldSchema: object) {
+    addBasicFieldSchema(fieldSchema: IScheam) {
         this.basicFields.push(fieldSchema);
 
     }
-    addContainerWidgetSchema(fieldSchema: object) {
+    /**
+     * 
+     * @param fieldSchema 
+     */
+    addContainerWidgetSchema(fieldSchema: IScheam) {
         this.containerFields.push(fieldSchema);
 
     }
 
-    addComponents(widgetCompoent: DefineComponent<{}, {}, any>) {
+    /**
+     * 
+     * @param widgetCompoent widget组件
+     * @param name widget名称
+     */
+    addWidget(widgetCompoent: DefineComponent<{}, {}, any>, name: string | undefined) {
+        if (name)
+            widgetCompoent.name = name;
         this.components.push(widgetCompoent);
     }
 }
