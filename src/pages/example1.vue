@@ -18,7 +18,7 @@ import formDemo from "./demo.json";
 
 
 /* 注意：formJson是指表单设计器导出的json，此处演示的formJson只是一个空白表单json！！ */
-console.log(formDemo)
+
 const formJson = reactive(formDemo);
 const optionData = reactive({});
 const vFormRef = ref(null);

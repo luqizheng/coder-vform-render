@@ -59,7 +59,7 @@ import emitter from "../../utils/emitter";
 import i18n from "../../utils/i18n";
 import refMixin from "../refMixin";
 import widgetManager  from '../../WidgetManager'
-console.log(widgetManager)
+
 export default {
   name: "GridColItem",
   componentName: "ContainerItem",
