@@ -64,9 +64,7 @@ export default {
   name: "GridColItem",
   componentName: "ContainerItem",
   mixins: [emitter, i18n, refMixin],
-  components: {
-    ...widgetManager.components
-  },
+  components:Object.assign({},widgetManager.components),
   props: {
     widget: Object,
     parentWidget: Object,

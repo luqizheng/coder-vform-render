@@ -46,7 +46,7 @@ export class WidgetManger {
      * @param widgetCompoent widget组件
      * @param name widget名称
      */
-    addWidget(widgetCompoent: DefineComponent<{}, {}, any>, name: string | undefined) {
+    addWidget(widgetCompoent: DefineComponent<{}, {}, any>, name: string | undefined = undefined) {
         if (name)
             widgetCompoent.name = name;
         this.components[widgetCompoent.name] = widgetCompoent;

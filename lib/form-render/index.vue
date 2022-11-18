@@ -51,9 +51,7 @@
     name: "VFormRender",
     componentName: 'VFormRender',
     mixins: [emitter, i18n],
-    components: {
-      ...widgetManager.components
-    },
+    components:Object.assign({},widgetManager.components),
     props: {
       formJson: { //prop传入的表单JSON配置
         type: Object,
