@@ -11,7 +11,7 @@ import TabItem from './form-render/container-item/tab-item.vue'
 import TableCellItem from './form-render/container-item/table-cell-item.vue'
 import TableItem from './form-render/container-item/table-item.vue'
 
-export const components = {} as IComponentsSetting;
+export const components = {} as IWidgetComponents;
 /**
  * 
  * @param widgetCompoent widget组件
@@ -31,7 +31,7 @@ components[TableCellItem.name] = TableCellItem
 components[TableItem.name] = TableItem
 
 
-interface IComponentsSetting {
+export interface IWidgetComponents {
     [key: string]: any
 }
 
