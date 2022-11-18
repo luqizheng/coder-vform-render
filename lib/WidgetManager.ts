@@ -11,9 +11,17 @@ import TabItem from './form-render/container-item/tab-item.vue'
 import TableCellItem from './form-render/container-item/table-cell-item.vue'
 import TableItem from './form-render/container-item/table-item.vue'
 
-
-
 export const components = {} as IComponentsSetting;
+/**
+ * 
+ * @param widgetCompoent widget组件
+ * @param name widget名称
+ */
+export const addWidget = (widgetCompoent: DefineComponent<{}, {}, any> | any, name: string | undefined = undefined) => {
+    if (name)
+        widgetCompoent.name = name;
+    components[widgetCompoent.name] = widgetCompoent;
+}
 components[SvgIcon.name] = SvgIcon
 components[ContainerItemWrapper.name] = ContainerItemWrapper;
 components[GridColItem.name] = GridColItem;

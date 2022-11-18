@@ -1,5 +1,5 @@
 export * from './types'
-import WidgetPanelManger from "./WidgetManager";
+import WidgetPanelManger, { components, addWidget } from "./WidgetManager";
 
 import './styles/global.scss'
 
@@ -43,7 +43,8 @@ export const fieldMixin = fieldMixin1
 export const SvgIcon = SvgIcon1
 export const util = Util
 export const widgetManager = WidgetPanelManger
-
+export const Widgets = components;
+export const AddWidget = addWidget;
 export default {
     install: (app: any) => {
         app.component(VFormRender.name, VFormRender)
