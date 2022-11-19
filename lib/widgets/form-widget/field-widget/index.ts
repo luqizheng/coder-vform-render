@@ -1,5 +1,5 @@
 import { IScheam } from "../../../types";
-import { addWidget ,addBasicFieldSchema} from "../../..";
+import { addWidget ,addBasicFieldSchema} from "../../../WidgetManager";
 import { DefineComponent } from "vue";
 
 const schemaFiles = import.meta.glob('./*.ts', { eager: true, import: 'default' })

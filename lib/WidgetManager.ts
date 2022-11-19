@@ -2,14 +2,7 @@
 import { DefineComponent } from "vue";
 //局部注册组件
 import SvgIcon from './svg-icon/index.vue'
-import ContainerItemWrapper from './form-render/container-item/container-item-wrapper.vue'
-import GridColItem from './form-render/container-item/grid-col-item.vue'
 
-import SubFormItem from './form-render/container-item/sub-form-item.vue'
-import TabItem from './form-render/container-item/tab-item.vue'
-
-import TableCellItem from './form-render/container-item/table-cell-item.vue'
-import TableItem from './form-render/container-item/table-item.vue'
 import { IScheam } from "./types";
 
 export const widgets = {} as IWidgetComponents;
@@ -48,12 +41,6 @@ export const addContainerWidgetSchema = (fieldSchema: IScheam): void => {
 }
 
 widgets[SvgIcon.name] = SvgIcon
-widgets[ContainerItemWrapper.name] = ContainerItemWrapper;
-widgets[GridColItem.name] = GridColItem;
-widgets[SubFormItem.name] = SubFormItem;
-widgets[TabItem.name] = TabItem
-widgets[TableCellItem.name] = TableCellItem
-widgets[TableItem.name] = TableItem
 
 
 export interface IWidgetComponents {

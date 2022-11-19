@@ -1,3 +1,5 @@
+import { addWidget } from "../../WidgetManager";
+
 const modules = import.meta.glob('./*.vue', { eager: true, import: 'default' })
 
 export default {
@@ -5,6 +7,7 @@ export default {
     for (const path in modules) {
       let comp = modules[path] as any;
       app.component(comp.name, modules[path])
+      addWidget(comp)
     }
   }
 }
