@@ -1,5 +1,5 @@
 import { IScheam } from "../../../types";
-import { widgetManager } from "../../..";
+import { addWidget ,addBasicFieldSchema} from "../../..";
 import { DefineComponent } from "vue";
 
 const schemaFiles = import.meta.glob('./*.ts', { eager: true, import: 'default' })
@@ -11,9 +11,7 @@ export default {
     //add widget compoents
     for (const path in modules) {
       let comp = modules[path] as DefineComponent<{}, {}, any>
-
-      widgetManager.addWidget(comp, undefined);
-      //app.component(comp.name, comp)
+      addWidget(comp, undefined);
     }
 
     //add schema for designer.
@@ -23,7 +21,7 @@ export default {
         continue;
       let widgetSchema = schemaFiles[path] as IScheam;
 
-      widgetManager.addBasicFieldSchema(widgetSchema)
+      addBasicFieldSchema(widgetSchema)
     }
 
 

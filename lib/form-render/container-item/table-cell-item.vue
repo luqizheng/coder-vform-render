@@ -29,12 +29,12 @@
 import emitter from '../../utils/emitter'
 import i18n from "../../utils/i18n"
 import refMixin from "../refMixin"
-import { components } from '../../WidgetManager'
+import { widgets } from '../../WidgetManager'
 export default {
   name: "TableCellItem",
   componentName: "ContainerItem",
   mixins: [emitter, i18n, refMixin],
-  components:  () => components,
+  components: widgets,
 
   props: {
     widget: Object,

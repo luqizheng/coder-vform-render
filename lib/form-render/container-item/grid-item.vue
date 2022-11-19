@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import {components} from '../../WidgetManager'
+import {widgets} from '../../WidgetManager'
 import emitter from '../../utils/emitter'
 import i18n from "../../utils/i18n"
 import refMixin from "../refMixin"
@@ -29,7 +29,7 @@ export default {
   name: "grid-item",
   componentName: 'ContainerItem',
   mixins: [emitter, i18n, refMixin, containerItemMixin],
-  components: components,
+  components: widgets,
   props: {
     widget: Object,
   },

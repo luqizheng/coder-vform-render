@@ -12,7 +12,7 @@ import TableCellItem from './form-render/container-item/table-cell-item.vue'
 import TableItem from './form-render/container-item/table-item.vue'
 import { IScheam } from "./types";
 
-export const components = {} as IWidgetComponents;
+export const widgets = {} as IWidgetComponents;
 /**
  * 
  * @param widgetCompoent widget组件
@@ -21,71 +21,52 @@ export const components = {} as IWidgetComponents;
 export const addWidget = (widgetCompoent: DefineComponent<{}, {}, any> | any, name: string | undefined = undefined) => {
     if (name)
         widgetCompoent.name = name;
-    components[widgetCompoent.name] = widgetCompoent;
+    widgets[widgetCompoent.name] = widgetCompoent;
 }
-components[SvgIcon.name] = SvgIcon
-components[ContainerItemWrapper.name] = ContainerItemWrapper;
-components[GridColItem.name] = GridColItem;
-components[SubFormItem.name] = SubFormItem;
-components[TabItem.name] = TabItem
-components[TableCellItem.name] = TableCellItem
-components[TableItem.name] = TableItem
+
+export const addCustomWidgetSchema = (fieldSchema: IScheam): void => {
+    customFields.push(fieldSchema)
+
+}
+
+export const addAdvanceFields = (fieldSchema: IScheam): void => {
+    advanceFields.push(fieldSchema)
+
+}
+
+export const addBasicFieldSchema = (fieldSchema: IScheam): void => {
+    basicFields.push(fieldSchema);
+
+}
+/**
+ * 
+ * @param fieldSchema 
+ */
+export const addContainerWidgetSchema = (fieldSchema: IScheam): void => {
+    containerFields.push(fieldSchema);
+
+}
+
+widgets[SvgIcon.name] = SvgIcon
+widgets[ContainerItemWrapper.name] = ContainerItemWrapper;
+widgets[GridColItem.name] = GridColItem;
+widgets[SubFormItem.name] = SubFormItem;
+widgets[TabItem.name] = TabItem
+widgets[TableCellItem.name] = TableCellItem
+widgets[TableItem.name] = TableItem
 
 
 export interface IWidgetComponents {
     [key: string]: any
 }
 
-export class WidgetManger {
 
-    constructor() {
-
-    }
-
-    containerFields = new Array<IScheam>()
-
-    basicFields = new Array<IScheam>()
-
-    advanceFields = new Array<IScheam>()
-
-    customFields = new Array<IScheam>();
+export const containerFields = new Array<IScheam>()
 
 
+export const basicFields = new Array<IScheam>()
 
 
-    addCustomWidgetSchema(fieldSchema: IScheam) {
-        this.customFields.push(fieldSchema)
+export const advanceFields = new Array<IScheam>()
 
-    }
-
-    addAdvanceFields(fieldSchema: IScheam) {
-        this.advanceFields.push(fieldSchema)
-
-    }
-
-    addBasicFieldSchema(fieldSchema: IScheam) {
-        this.basicFields.push(fieldSchema);
-
-    }
-    /**
-     * 
-     * @param fieldSchema 
-     */
-    addContainerWidgetSchema(fieldSchema: IScheam) {
-        this.containerFields.push(fieldSchema);
-
-    }
-
-    /**
-     * 
-     * @param widgetCompoent widget组件
-     * @param name widget名称
-     */
-    addWidget(widgetCompoent: DefineComponent<{}, {}, any> | any, name: string | undefined = undefined) {
-        if (name)
-            widgetCompoent.name = name;
-        components[widgetCompoent.name] = widgetCompoent;
-    }
-}
-const widgetManager = new WidgetManger()
-export default widgetManager;
+export const customFields = new Array<IScheam>();

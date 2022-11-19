@@ -29,12 +29,12 @@ import refMixin from "../refMixin"
 
 
 import containerItemMixin from "./containerItemMixin";
-import { components } from '../../WidgetManager'
+import { widgets } from '../../WidgetManager'
 export default {
   name: "table-item",
   componentName: 'ContainerItem',
   mixins: [emitter, i18n, refMixin, containerItemMixin],
-  components:  () => components,
+  components: widgets,
   props: {
     widget: Object,
   },
