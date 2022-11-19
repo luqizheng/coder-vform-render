@@ -3,7 +3,7 @@ export * from "./WidgetManager";
 
 import './styles/global.scss'
 
-import VFormRender from './form-render/index.vue'
+//import VFormRender from './form-render/index.vue'
 import ContainerItems from './form-render/container-item/index'
 import validators from './utils/validators'
 import BasicFieldWidget from './widgets/form-widget/field-widget/index'
@@ -29,6 +29,7 @@ export {
 //扩展需要你
 import formItemWrapper from './widgets/form-widget/field-widget/form-item-wrapper.vue'
 import staticContentWrapper from './widgets/form-widget/field-widget/static-content-wrapper.vue'
+import { defineAsyncComponent } from 'vue';
 
 export const FormItemWrapper = formItemWrapper
 export const StaticContentWrapper = staticContentWrapper
@@ -46,7 +47,7 @@ export const util = Util
 
 export default {
     install: (app: any) => {
-        app.component(VFormRender.name, VFormRender)
+        app.component("v-form-render", defineAsyncComponent(()=>import( './form-render/index.vue')))
             .use(ContainerItems).use(BasicFieldWidget)
     }
 } 
