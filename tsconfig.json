@@ -22,7 +22,7 @@
     "lib/**/*.ts",
     "lib/**/*.d.ts",
     "lib/**/*.tsx",
-    "lib/**/*.vue", "lib/form-render/refMixin.js", "lib/form-render/refMixin.js" ],
+    "lib/**/*.vue", "lib/form-render/refMixin.js", "lib/form-render/refMixin.js", "lib/form-render/container-item/containerItemMixin.js", "lib/form-render/container-item/containerItemMixin.js" ],
   "references": [
     {
       "path": "./tsconfig.node.json"
