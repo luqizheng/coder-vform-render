@@ -29,7 +29,15 @@ export const addAdvanceFields = (fieldSchema: IScheam): void => {
 
 export const addBasicFieldSchema = (fieldSchema: IScheam): void => {
     basicFields.push(fieldSchema);
+}
 
+export const addAdvanceCustomerFieldSchema = (fieldSchema: IScheam, panelTitle: string): void => {
+    var fields = advanceCustomerFields.get(panelTitle);
+    if (!fields) {
+        fields = new Array<IScheam>();
+        advanceCustomerFields.set(panelTitle, fields);
+    }
+    fields.push(fieldSchema);
 }
 /**
  * 
@@ -57,3 +65,6 @@ export const basicFields = new Array<IScheam>()
 export const advanceFields = new Array<IScheam>()
 
 export const customFields = new Array<IScheam>();
+
+
+export const advanceCustomerFields = new Map<string, Array<IScheam>>();

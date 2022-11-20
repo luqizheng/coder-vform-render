@@ -1,6 +1,6 @@
 export * from './types'
 export * from "./WidgetManager";
-
+import render from  './form-render/index.vue'
 import './styles/global.scss'
 
 //import VFormRender from './form-render/index.vue'
@@ -47,7 +47,7 @@ export const util = Util
 
 export default {
     install: (app: any) => {
-        app.component("v-form-render", defineAsyncComponent(()=>import( './form-render/index.vue')))
+        app.component("v-form-render", render)
             .use(ContainerItems).use(BasicFieldWidget)
     }
 } 
