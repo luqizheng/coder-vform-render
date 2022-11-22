@@ -1,7 +1,7 @@
 //import { vfApp } from '@/utils/create-app'
 
 import { DefineComponent } from "vue"
-interface IPropertEdit {
+export interface IPropertEdit {
     [key: string]: string
 }
 import * as EditorDefined from './defaultEditor'
