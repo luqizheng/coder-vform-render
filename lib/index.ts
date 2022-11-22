@@ -1,6 +1,6 @@
 export * from './types'
 export * from "./WidgetManager";
-
+export * from './propertyRegister'
 
 import render from  './form-render/index.vue'
 import './styles/global.scss'
@@ -31,7 +31,7 @@ export {
 //扩展需要你
 import formItemWrapper from './widgets/form-widget/field-widget/form-item-wrapper.vue'
 import staticContentWrapper from './widgets/form-widget/field-widget/static-content-wrapper.vue'
-import { defineAsyncComponent } from 'vue';
+
 
 export const FormItemWrapper = formItemWrapper
 export const StaticContentWrapper = staticContentWrapper
