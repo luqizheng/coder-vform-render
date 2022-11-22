@@ -1,5 +1,7 @@
 export * from './types'
 export * from "./WidgetManager";
+
+
 import render from  './form-render/index.vue'
 import './styles/global.scss'
 
