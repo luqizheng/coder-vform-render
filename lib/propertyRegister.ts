@@ -241,7 +241,7 @@ export function registerCPEditor(app: any, uniquePropName: string, propEditorNam
  * @param editorComponent
  */
 export function registerCPDefaultEditor(app: any, uniquePropName: string, propEditorName: string, editorComponent: DefaultEditor) {
-    let comp = createDefaultEditor(app)
+    let comp = createDefaultEditor(editorComponent)
     app.component(propEditorName, comp);
     registerCommonProperty(uniquePropName, propEditorName)
 }
@@ -268,7 +268,7 @@ export function registerAPEditor(app: any, uniquePropName: string, propEditorNam
  */
 export function registerAPDefaultEditor(app: any, uniquePropName: string, propEditorName: string, editorComponent: DefaultEditor) {
 
-    let comp = createDefaultEditor(app)
+    let comp = createDefaultEditor(editorComponent)
     app.component(propEditorName, comp);
     registerAdvancedProperty(uniquePropName, propEditorName)
 }
