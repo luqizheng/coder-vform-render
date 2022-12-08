@@ -1,5 +1,8 @@
 import { translate } from "./utils/i18n";
 import emitter from "./utils/emitter";
+import {
+  Edit
+} from '@element-plus/icons-vue'
 
 export const createInputTextEditor = function (propName, propLabelKey) {
   return {
@@ -171,7 +174,7 @@ export const createEventHandlerEditor = function (eventPropName, eventParams) {
         <el-form-item label={eventPropName} label-width="150px">
           <el-button
             type="info"
-            icon="el-icon-edit"
+            icon={Edit}
             plain
             round
             onClick={this.editEventHandler}
