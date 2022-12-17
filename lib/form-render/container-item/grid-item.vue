@@ -1,6 +1,5 @@
 <template>
   <container-item-wrapper :widget="widget">
-
     <el-row :key="widget.id" :gutter="widget.options.gutter" class="grid-container" :class="[customClass]"
       :ref="widget.id" v-show="!widget.options.hidden">
       <template v-for="(colWidget, colIdx) in widget.cols" :key="colIdx">
@@ -13,12 +12,11 @@
         </grid-col-item>
       </template>
     </el-row>
-
   </container-item-wrapper>
 </template>
 
 <script>
-import {widgets} from '../../WidgetManager'
+import { widgets } from '../../WidgetManager'
 import emitter from '../../utils/emitter'
 import i18n from "../../utils/i18n"
 import refMixin from "../refMixin"

@@ -1,14 +1,28 @@
 import { translate } from "./utils/i18n";
 import emitter from "./utils/emitter";
 import {
-  Edit
-} from '@element-plus/icons-vue'
+  ElFormItem,
+  ElButton,
+  ElSelect,
+  ElSwitch,
+  ElInputNumber,
+  ElCheckbox,
+  ElCheckboxGroup,
+  ElInput,
+  ElRadio,
+  ElOption,
+  ElRadioGroup,
+  ElRadioButton,
+  ElSlider
+} from "element-plus";
+import { Edit } from "@element-plus/icons-vue";
 
 export const createInputTextEditor = function (propName, propLabelKey) {
   return {
     props: {
       optionModel: Object,
     },
+    components: { ElFormItem },
     render(h) {
       return (
         <el-form-item label={translate(propLabelKey)}>
@@ -24,6 +38,7 @@ export const createInputNumberEditor = function (propName, propLabelKey) {
     props: {
       optionModel: Object,
     },
+    components: { ElFormItem, ElInputNumber },
     methods: {
       updateValue(newValue) {
         if (newValue === undefined || newValue === null || isNaN(newValue)) {
@@ -53,6 +68,7 @@ export const createBooleanEditor = function (propName, propLabelKey) {
     props: {
       optionModel: Object,
     },
+    components: { ElSwitch, ElFormItem },
     render(h) {
       return (
         <el-form-item label={translate(propLabelKey)}>
@@ -72,6 +88,7 @@ export const createCheckboxGroupEditor = function (
     props: {
       optionModel: Object,
     },
+    components: { ElFormItem, ElCheckbox, ElCheckboxGroup },
     render(h) {
       return (
         <el-form-item label={translate(propLabelKey)}>
@@ -95,6 +112,7 @@ export const createRadioGroupEditor = function (
     props: {
       optionModel: Object,
     },
+    components: { ElFormItem, ElRadioGroup, ElRadio },
     render(h) {
       return (
         <el-form-item label={translate(propLabelKey)}>
@@ -118,6 +136,7 @@ export const createRadioButtonGroupEditor = function (
     props: {
       optionModel: Object,
     },
+    components: { ElFormItem, ElRadioGroup, ElRadio, ElRadionButton },
     render(h) {
       return (
         <el-form-item label={translate(propLabelKey)}>
@@ -141,6 +160,7 @@ export const createSelectEditor = function (propName, propLabelKey, configs) {
     props: {
       optionModel: Object,
     },
+    components: { ElFormItem, ElSelect, ElOption },
     render(h) {
       return (
         <el-form-item label={translate(propLabelKey)}>
@@ -161,6 +181,7 @@ export const createEventHandlerEditor = function (eventPropName, eventParams) {
       optionModel: Object,
     },
     mixins: [emitter],
+    components: { ElFormItem, ElButton },
     methods: {
       editEventHandler() {
         this.dispatch("SettingPanel", "editEventHandler", [

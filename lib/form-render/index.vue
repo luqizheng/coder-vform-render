@@ -35,7 +35,7 @@
 </template>
 
 <script>
-//import ElForm from 'element-ui/packages/form/src/form.vue'  /* 用于源码调试Element UI */
+
 import emitter from '../utils/emitter'
 import './container-item/index'
 import { widgets } from '../WidgetManager'
@@ -44,6 +44,8 @@ import {
   getAllFieldWidgets, traverseFieldWidgets, buildDefaultFormJson
 } from "../utils/util"
 import i18n, { changeLocale } from "../utils/i18n"
+
+
 
 export default {
   name: "VFormRender",

@@ -1,11 +1,11 @@
-
+import { ElCol, ElRow, ElButton, ElTooltip, ElTabs, ElTabPane,ElForm } from "element-plus";
 import { DefineComponent } from "vue";
 //局部注册组件
 import SvgIcon from './svg-icon/index.vue'
 
 import { IScheam } from "./types";
 
-export const widgets = {} as IWidgetComponents;
+export const widgets = { ElCol, ElRow, ElButton, ElTooltip, ElTabs, ElTabPane,ElForm, } as IWidgetComponents;
 /**
  * 
  * @param widgetCompoent widget组件

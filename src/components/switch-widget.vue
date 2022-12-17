@@ -11,6 +11,7 @@
 
 <script>
 import { FormItemWrapper, emitter, i18n, fieldMixin } from "../../lib";
+import { ElSilder } from 'element-plus'
 export default {
   name: "slider-widget",
   componentName: 'FieldWidget',  //必须固定为FieldWidget，用于接收父级组件的broadcast事件
@@ -42,7 +43,7 @@ export default {
 
   },
   components: {
-    FormItemWrapper,
+    FormItemWrapper, ElSilder
   },
   data() {
     return {
@@ -84,7 +85,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 /* form-item-wrapper已引入，还需要重复引入吗？ */
 
 .full-width-input {

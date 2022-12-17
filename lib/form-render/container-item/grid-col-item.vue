@@ -39,7 +39,7 @@
 import emitter from "../../utils/emitter";
 import i18n from "../../utils/i18n";
 import refMixin from "../refMixin";
-import {widgets} from '../../WidgetManager'
+import { widgets } from '../../WidgetManager'
 
 export default {
   name: "GridColItem",

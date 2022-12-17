@@ -86,6 +86,7 @@
 </template>
 
 <script>
+import { ElFormItem, ElTooltip } from "element-plus";
 import i18n from "@/utils/i18n";
 import svgIcon from "@/svg-icon";
 export default {
@@ -119,7 +120,7 @@ export default {
     rules: Array,
   },
   inject: ["getFormConfig"],
-  components: { svgIcon },
+  components: { svgIcon, ElFormItem, ElTooltip },
   computed: {
     formConfig() {
       return this.getFormConfig();
