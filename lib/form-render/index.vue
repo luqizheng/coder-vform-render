@@ -168,7 +168,7 @@ export default {
     },
 
     initLocale() {
-      let curLocale = localStorage.getItem('v_form_locale') || 'zh-CN'
+      let curLocale = window.localStorage.getItem('v_form_locale') || 'zh-CN'
       this.changeLanguage(curLocale)
     },
 

@@ -39,7 +39,7 @@ const langResources: dynamcProperty = {
 }
 
 const i18n = createI18n({
-  locale: localStorage.getItem('v_form_locale') || 'zh-CN',
+  locale: window.localStorage.getItem('v_form_locale') || 'zh-CN',
   messages: langResources
 })
 

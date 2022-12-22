@@ -2,7 +2,7 @@ import axios from 'axios'
 
 axios.interceptors.request.use(function (config:any) {
     // 在发送请求之前做些什么
-    var token = localStorage.getItem("token");
+    var token = window.localStorage.getItem("token");
     if (token && config.url.indexOf('account/login')==-1) {
         config.headers.Authorization = token;
     }
