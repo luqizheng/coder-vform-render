@@ -45,7 +45,7 @@ import {
 } from "../utils/util"
 import i18n, { changeLocale } from "../utils/i18n"
 
-
+import { getItem, setItem } from "../utils/storage"
 
 export default {
   name: "VFormRender",
@@ -168,7 +168,7 @@ export default {
     },
 
     initLocale() {
-      let curLocale = window.localStorage.getItem('v_form_locale') || 'zh-CN'
+      let curLocale = getItem('v_form_locale') || 'zh-CN'
       this.changeLanguage(curLocale)
     },
 

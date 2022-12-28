@@ -10,7 +10,7 @@ import enLocale_render from "../lang/en-US_render";
 import zhLocale_render from "../lang/zh-CN_render";
 import enLocale_extension from "../lang/en-US_extension";
 import zhLocale_extension from "../lang/zh-CN_extension";
-
+import { getItem } from './storage'
 interface dynamcProperty {
   [key: string]: any
 }
@@ -39,7 +39,7 @@ const langResources: dynamcProperty = {
 }
 
 const i18n = createI18n({
-  locale: window.localStorage.getItem('v_form_locale') || 'zh-CN',
+  locale: getItem('v_form_locale') || 'zh-CN',
   messages: langResources
 })
 
