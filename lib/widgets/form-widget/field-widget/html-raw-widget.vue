@@ -3,9 +3,10 @@
   <form-item-wrapper :designer="designer" :field="field" :rules="rules" :design-state="designState"
     :parent-widget="parentWidget" :parent-list="parentList" :index-of-parent-list="indexOfParentList"
     :sub-form-row-index="subFormRowIndex" :sub-form-col-index="subFormColIndex" :sub-form-row-id="subFormRowId">
-    <div :style="{ 'text-align': field.options.labelAlign }">
-      <div>{{ fieldModel ?? field.options.defaultValue }}</div>
+
+    <div :style="{ 'text-align': field.options.labelAlign }" v-html="fieldModel" v-show="field.options.hidden">
     </div>
+
   </form-item-wrapper>
 </template>
 
@@ -20,7 +21,7 @@ import FormItemWrapper from "./form-item-wrapper.vue";
 
 
 export default {
-  name: "lable-form-widget",
+  name: "html-raw-widget",
   componentName: "FieldWidget", //必须固定为FieldWidget，用于接收父级组件的broadcast事件
 
   mixins: [emitter, fieldMixin, i18n],
