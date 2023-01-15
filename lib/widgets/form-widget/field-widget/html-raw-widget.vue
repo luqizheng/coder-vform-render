@@ -4,7 +4,7 @@
     :parent-widget="parentWidget" :parent-list="parentList" :index-of-parent-list="indexOfParentList"
     :sub-form-row-index="subFormRowIndex" :sub-form-col-index="subFormColIndex" :sub-form-row-id="subFormRowId">
 
-    <div :style="{ 'text-align': field.options.labelAlign }" v-html="fieldModel" v-show="field.options.hidden">
+    <div :style="{ 'text-align': field.options.labelAlign }" v-html="fieldModel" v-show="!field.options.hidden">
     </div>
 
   </form-item-wrapper>
