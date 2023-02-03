@@ -388,7 +388,9 @@ export default {
       }
       return foundRef
     },
-
+    getFormRef() {
+      return this
+    },
     clearFormDataModel() {
       for (let pkey in this.formDataModel) {
         delete this.formDataModel[pkey]
