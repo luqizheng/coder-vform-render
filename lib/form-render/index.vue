@@ -166,7 +166,13 @@ export default {
     getWidgetName(widget) {
       return widget.type + '-widget'
     },
+    getContainerWidgetName(widget) {
+      if (widget.type === 'grid') {  //grid-item跟VueGridLayout全局注册组件重名，故特殊处理！！
+        return 'vf-grid-item'
+      }
 
+      return widget.type + '-item'
+    },
     initLocale() {
       let curLocale = getItem('v_form_locale') || 'zh-CN'
       this.changeLanguage(curLocale)

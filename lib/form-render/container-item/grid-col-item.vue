@@ -13,7 +13,7 @@
           </component>
         </template>
         <template v-else>
-          <component :is="subWidget.type + '-widget'" :field="subWidget" :designer="null" :key="swIdx"
+          <component :is="getComponentByContainer(subWidget)" :field="subWidget" :designer="null" :key="swIdx"
             :parent-list="widget.widgetList" :index-of-parent-list="swIdx" :parent-widget="widget">
             <!-- 递归传递插槽！！！ -->
             <template v-for="slot in Object.keys($slots)" v-slot:[slot]="scope">
